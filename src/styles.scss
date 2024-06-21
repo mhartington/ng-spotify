@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* the props */
+@import 'open-props/style';
+@import 'open-props/normalize';
+@import 'open-props/buttons';
+
+a {
+  color: var(--stone-0);
+  &:visited {
+    color: unset;
+  }
+}

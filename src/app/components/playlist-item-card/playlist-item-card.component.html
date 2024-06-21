@@ -1,0 +1,27 @@
+<a
+  [routerLink]="['/', 'playlist', playlist().id]"
+  transition
+  [transitionName]="'playlist-' + playlist().id + '-box'"
+>
+  <div class="img-wrapper">
+    <img
+      [src]="playlist().cover"
+      [alt]="playlist().title"
+      class="object-cover h-full w-full shadow-[5px_0_30px_0px_rgba(0,0,0,0.3)]"
+      transition
+      [transitionName]="'playlist-' + playlist().id + '-img'"
+
+    />
+  </div>
+  <p
+    class="font-bold block"
+    transition
+    [transitionName]="'playlist-' + playlist().id + '-title'"
+  >
+    {{ playlist().title }}
+  </p>
+  <play-button
+    transition
+    [transitionName]="'playlist-' + playlist().id + '-play'"
+  />
+</a>

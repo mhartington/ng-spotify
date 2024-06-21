@@ -1,0 +1,67 @@
+<div
+  class="playlist-page"
+  transition
+  [transitionName]="'playlist-' + playlist().id + '-box'"
+>
+  <page-header />
+  <div
+    class="hero"
+  >
+    <div class="img-wrapper">
+      <img
+        [src]="playlist().cover"
+        [alt]="playlist().title"
+        transition
+        [transitionName]="'playlist-' + playlist().id + '-img'"
+      />
+    </div>
+    <div class="playlist-details">
+      <p>Playlist</p>
+      <div>
+        <h1>
+          {{ playlist().title }}
+          <span
+            transition
+            [transitionName]="'playlist-' + playlist().id + '-title'"
+          ></span>
+        </h1>
+      </div>
+        <div class="playlist-notes">
+          <inline-artists [artists]="playlist().artists" />
+          <div class="mt-1">
+            <span class="font-semibold">58 likes</span>, 83 musics,
+            <span class="text-gray-300">about 3h 15min</span>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="playlist-content bg-zinc-900/30 mt-6 flex-1 p-6 blur-100">
+
+
+    <div class="button-group">
+      <play-button />
+      <div
+        class="ml-4"
+        transition
+        [transitionName]="'playlist-' + playlist().id + '-play'"
+      ></div>
+      <like-button />
+      <dot-button />
+    </div>
+      <music-table />
+  </div>
+  <div
+    class="backdrop absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+    [style.--context-color]="playlist().color.accent"
+  >
+    <img
+      [src]="playlist().cover"
+      [alt]="playlist().title"
+      class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+    ></div>
+  </div>
+</div>

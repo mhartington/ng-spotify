@@ -1,0 +1,18 @@
+:host {
+  button {
+    width: var(--size-8);
+    height: var(--size-8);
+    border-radius: var(--radius-round);
+    background: var(--green-6);
+    border: none;
+    color: var(--gray-9);
+
+
+    svg {
+
+      inline-size: var(--size-7);
+      block-size: var(--size-7);
+      max-inline-size: unset;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<a
+  [routerLink]="['/', 'playlist', playlist().id]"
+  transition
+  [transitionName]="'playlist-' + playlist().id + '-box'"
+>
+  <!-- data-color={playlist.color.dark} -->
+  <div class="card-inner">
+    <div class="artwork-wrapper">
+      <img
+        class="artwork"
+        [src]="playlist().cover"
+        [alt]="playlist().title"
+        transition
+        [transitionName]="'playlist-' + playlist().id + '-img'"
+
+      />
+    </div>
+    <play-button transition [transitionName]="'playlist-' + playlist().id + '-play'" />
+  </div>
+  <div class="card-text">
+    <p transition [transitionName]="'playlist-' + playlist().id + '-title'"> {{ playlist().title }} </p>
+    <p><pure-inline-artists [artists]="playlist().artists" /></p>
+  </div>
+</a>

@@ -1,0 +1,17 @@
+:host {
+  button {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: var(--stone-6);
+
+    width: 3rem;
+    height: 3rem;
+
+    svg{
+      inline-size: 2rem;
+      block-size: 2rem;
+      max-inline-size: unset;
+    }
+  }
+}

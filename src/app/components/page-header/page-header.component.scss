@@ -1,0 +1,29 @@
+:host {
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--size-5);
+    padding-right: var(--size-5);
+    padding-top: var(--size-3);
+    padding-bottom: var(--size-3);
+
+    button {
+      width: var(--size-7);
+      height: var(--size-7);
+      padding: 0;
+      border-radius: var(--radius-round);
+      background: rgba(from var(--stone-12) r g b / 1);
+      border: none;
+      box-shadow: none;
+
+
+      svg{
+
+
+      inline-size: var(--size-3);
+      block-size: var(--size-3);
+      max-inline-size: unset;
+      }
+    }
+  }
+}

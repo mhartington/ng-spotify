@@ -1,0 +1,26 @@
+<div
+  class="playlist-container"
+  style="min-height: 300px; --context-color: #134e4a"
+>
+  <page-header />
+  <div class="playlist-inner">
+    <greeting-title />
+    <div class="playlist-items">
+      @for (playlist of playlists(); track playlist.id) {
+        <playlist-item-card [playlist]="playlist" />
+      }
+    </div>
+  </div>
+  <div
+    class="gradient-bg absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80"
+  ></div>
+</div>
+
+<div class="playlist-container more-container">
+  <h3>Made for you</h3>
+  <div class="more-playlists">
+    @for (playlist of morePlaylists(); track playlist.id) {
+      <playlist-card [playlist]="playlist" />
+    }
+  </div>
+</div>
